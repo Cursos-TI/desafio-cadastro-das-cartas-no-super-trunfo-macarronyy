@@ -1,10 +1,21 @@
 #include <stdio.h>
-
+#include <string.h>
+struct CartaTrunfo {
+    char ESTADO;
+    char CODIGO;
+    char NOME;
+    int POPULACAO;
+    float PIB
+    float AREA
+    };
+void lerCarta(struct CartaTrunfo *carta){
+printf("\nDigite o estado (uma letra de A até H):");
+scanf("%c", &carta->ESTADO);
+printf("digite o código da carta:"
 // Desafio Super Trunfo - Países
 // Tema 1 - Cadastro das Cartas
 // Este código inicial serve como base para o desenvolvimento do sistema de cadastro de cartas de cidades.
 // Siga os comentários para implementar cada parte do desafio.
-//Teste larissa
 
 int main() {
     // Sugestão: Defina variáveis separadas para cada atributo da cidade.
