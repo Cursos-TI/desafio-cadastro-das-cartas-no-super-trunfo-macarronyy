@@ -11,23 +11,31 @@ struct CartaTrunfo {
 void lerCarta(struct CartaTrunfo *carta){
 printf("\nDigite o estado (uma letra de A até H):");
 scanf("%c", &carta->ESTADO);
-printf("digite o código da carta:"
-// Desafio Super Trunfo - Países
-// Tema 1 - Cadastro das Cartas
-// Este código inicial serve como base para o desenvolvimento do sistema de cadastro de cartas de cidades.
-// Siga os comentários para implementar cada parte do desafio.
-
+printf("digite o código da carta:");
+scanf("%s", carta->CODIGO);
+printf("Digite o nome da cidade:");
+scanf("%s", carta->NOME);
+printf("digite a população da cidade: ");
+scanf("%d", &carta->POPULACAO);
+printf("digite o PIB: ");
+scanf("%d", carta->PIB);
+printf("digite a área: ");
+scanf("%d", carta->AREA);
+}
 int main() {
-    // Sugestão: Defina variáveis separadas para cada atributo da cidade.
-    // Exemplos de atributos: código da cidade, nome, população, área, PIB, número de pontos turísticos.
-    
-    // Cadastro das Cartas:
-    // Sugestão: Utilize a função scanf para capturar as entradas do usuário para cada atributo.
-    // Solicite ao usuário que insira as informações de cada cidade, como o código, nome, população, área, etc.
-    
-    // Exibição dos Dados das Cartas:
-    // Sugestão: Utilize a função printf para exibir as informações das cartas cadastradas de forma clara e organizada.
-    // Exiba os valores inseridos para cada atributo da cidade, um por linha.
+    struct CartaTrunfo carta1, carta2;
+    printf("insira os dados da carta 1: ");
+    lerCarta(&carta1);
 
-    return 0;
+    printf("insira os dados da carta 2: ");
+    lerCarta(&carta2);
+
+    printf("\n\nDADOS CARTA 1:\n");
+    printf("ESTADO: %c\nCODIGO: %s\nNOME %s\nPOPULACAO %d\nPIB %d\nAREA %d\n",
+        carta1.ESTADO, carta1.CODIGO, carta1.NOME, carta1.POPULACAO, carta1.PIB, carta1.AREA);
+
+    printf("\nDADOS CARTA 2:\n");
+    printf("ESTADO: %c\nCODIGO: %s\nNOME %s\nPOPULACAO %d\nPIB %d\nAREA %d\n",
+        carta2.ESTADO, carta2.CODIGO, carta2.NOME, carta2.POPULACAO, carta2.PIB, carta2.AREA);
+    return 0
 }
